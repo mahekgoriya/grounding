@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="success.html" method="post">
+        <table border="1" cellspacing="0" cellpadding="10" width="80%" align="center">
+            <tr>
+                <td colspan="2" align="center">REGISTER</td>
+            </tr>
+            <tr>
+                <td>FULL NAME</td>
+                <td>
+                    <input type="text" name="FNAME" placeholder="Full Name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Date of Birth</td>
+                <td>
+                    <input type="date" name="dob" placeholder="Enter email" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your mobile number</td>
+                <td>
+                    <input type="number" name="mon" placeholder="10 digit mo number" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="mal" value="0" />male
+                    <input type="radio" name="mal" value="1" />female
+                </td>
+            </tr>
+            <tr>
+                <td>Languages</td>
+                <td>
+                    <input type="checkbox" name="gujarati" value="1" id="gujarati">Gujarati
+                    <input type="checkbox" name="eng" value="2" id="ENG">English
+                    <input type="checkbox" name="hindi" value="4" id="HND">Hindi
+                    <input type="checkbox" name="mrt" value="8" id="MART">Marathi
+                </td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select name="country" required>
+                        <option value="">Selecet your Country</option>
+                        <option value="1">INDIA</option>
+                        <option value="2">NEPAL</option>
+                        <option value="3">BHUTAN</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>ADDRESS</td>
+                <td><textarea cols="80" rows="10">Hello</textarea></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
