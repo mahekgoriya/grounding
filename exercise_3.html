@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #FBEEC1;">
+    <style>
+        table
+        {
+            background-color: white;
+        }
+        input
+        {
+            background-color: white;
+            width:250px;
+            height: 25px;
+        }
+        h1{
+            color:blue
+        }
+       
+    </style>
+    <h1 align="center">Alpha one</h1>
+    <hr/>
+        <form action="success.html" method="post">
+            <table align="center" cellspacing="10" cellpadding="10" border="1" width="60%">
+                <tr>
+                    <td>
+                        Contact Information<br/>
+                        <input type="mail" name="mailid" placeholder="Email"><br/>
+                        <input style="width:20px; height:15px;" type="checkbox" name="updates">keep me up to date on news and exclusive offers
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Shipping address<br/>
+                        <input type="text" name="Fname" placeholder="First Name">
+                        <input type="text" name="Lname" placeholder="Last Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="company" placeholder="Company(Optional)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="address" placeholder="Adresss" rows="3" cols="100"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="appartment" placeholder="Appartment" rows="1" cols="100"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="city" placeholder="City" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Country:<br/>
+                        <select name="country" required>
+                            <option value="">Selecet your Country</option>
+                            <option value="1">INDIA</option>
+                            <option value="2">NEPAL</option>
+                            <option value="3">BHUTAN</option>
+                        </select>
+                        <input type="number" name="postalCode" placeholder="Postal Code">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="phonenumber" placeholder="Phone Number(optional)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="background-color: rgb(89, 89, 231);"type="submit" name="shopping" value="Payment">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
