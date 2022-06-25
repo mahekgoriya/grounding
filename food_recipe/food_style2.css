@@ -1,0 +1,128 @@
+*{
+    /* background-color: lightgrey; */
+}
+.main{
+    width:100%;
+    background-color: lightgrey;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    background-color: #060D17;
+    color:white;
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 5px;
+}
+.header{
+    top: 0px;
+    position: sticky;
+    color:white;
+    text-align: center;
+}
+.container{
+    /* background-color: red; */
+    width:70%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-rows: 100px 300px 490px 550px;
+    grid-template-columns: 50% 50%;
+    grid-gap:30px;
+}
+.head{
+    /* background-color: aqua; */
+    grid-column: 1/-1;
+    font-size: 40px;
+    text-align: center;
+    padding: 25px 0;
+    font-family: 'Cinzel', serif;
+    color:#384358;
+    letter-spacing: 2px;
+    word-spacing: 20px;
+    /* color: #2F820C; */
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px grey;
+    /* box-shadow: 2px 2px 2px grey; */
+}
+.details{
+    background-color: rgba(182, 104, 76,0.9);
+    text-align: justify;
+    padding: 20px 30px;
+    font-family: 'Fauna One', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddd3c5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px grey;
+
+}
+.image{
+    /* background-color: pink; */
+    grid-row: 2/4;
+    grid-column: 2/3;
+    
+}
+.image>img{
+    /* border: 1px solid grey ; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px grey;
+}
+.cookingtime{
+    background-color: #EAE6E3;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px grey;
+}
+.recipe{
+    background-color: #384358;
+    color:#EBEBEB;
+    grid-column: 1/-1;
+    box-shadow: 0px 0px 5px 5px grey;
+    border-radius: 10px;
+}
+img{
+    width:550px;
+    height:820px
+}
+.symbol{
+    width:50px;
+    height:50px;
+    margin: 20px 0;
+    /* border: 1px solid green; */
+}
+.align{
+    display:flex;
+    /* border: 1px solid green; */
+    align-items: center;
+    justify-content: center;
+}
+.align>h4{
+    font-family: 'Fauna One', serif;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    /* border: 1px solid red; */
+    margin-left: 25px;
+}
+
+.recipe>h4{
+    font-family: 'Fauna One', serif;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    /* border: 1px solid red; */
+    margin-left: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.recipe>p{
+    font-family: 'Fauna One', serif;
+    font-size: 18px;
+    text-align: justify;
+    padding: 30px 30px;
+    margin-top: 0;
+    font-weight: bold;
+    word-spacing: 6px;
+    letter-spacing: 1px;
+    
+}
