@@ -23,7 +23,7 @@ h1{
 .container{
     /* background-color: red; */
     width:70%;
-    margin: 30px auto;
+    margin: 20px auto;
     display: grid;
     grid-template-rows: 100px 300px 490px 550px;
     grid-template-columns: 50% 50%;
