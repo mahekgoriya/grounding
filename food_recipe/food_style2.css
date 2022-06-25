@@ -20,7 +20,7 @@ h1{
 }
 .container{
     /* background-color: red; */
-    width:70%;
+    width:72%;
     margin: 20px auto;
     display: grid;
     grid-template-rows: minmax(100px,auto) minmax(300px,auto) minmax(490px,auto) minmax(550px,auto);
