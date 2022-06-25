@@ -1,5 +1,5 @@
 *{
-    /* background-color: lightgrey; */
+    background-color: lightgrey;
 }
 .main{
     width:100%;
@@ -30,7 +30,7 @@ h1{
     grid-gap:30px;
 }
 .head{
-    /* background-color: aqua; */
+    background-color: lightgrey;
     grid-column: 1/-1;
     font-size: 40px;
     text-align: center;
