@@ -95,3 +95,16 @@ h5{
         width:315px
     }
 }
+@media (min-width: 481px) and (max-width: 767px) {
+    
+    .container 
+    {
+        flex-direction: column;
+    }
+   .customer1, .customer2, .customer3,.customer4{
+        width:482px;
+    }
+    .text{
+        height:200px;
+    }
+  }
