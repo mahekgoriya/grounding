@@ -39,13 +39,25 @@ ul{
 header{
     width:100vw;
     height:100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(mountains1.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(https://source.unsplash.com/random?mountains);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    animation-name: MOVE-BG;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite
+}
+@keyframes MOVE-BG {
+    from {
+      background-position: bottom;
+    }
+    to { 
+      background-position: top;
+    }
 }
 .header-content{
     color: whitesmoke;
