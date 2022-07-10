@@ -46,16 +46,28 @@ header{
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    -webkit-animation-name: MOVE-BG;
     animation-name: MOVE-BG;
-  animation-duration: 50s;
-  animation-timing-function: linear;
-  animation-iteration-count:infinite
+    -webkit-animation-duration: 50s;
+    animation-duration: 50s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
 }
-@keyframes MOVE-BG {
-    from {
+@-webkit-keyframes MOVE-BG {
+    0% {
       background-position: bottom;
     }
-    to { 
+    100% { 
+      background-position: top;
+    }
+}
+@keyframes MOVE-BG {
+    0% {
+      background-position: bottom;
+    }
+    100% { 
       background-position: top;
     }
 }
@@ -121,5 +133,21 @@ header{
     .nav-links li{
         margin: 30px auto;
 
+    }
+    @keyframes MOVE-BG {
+        0% {
+          background-position: left;
+        }
+        100% { 
+          background-position: right;
+        }
+    }
+    @-webkit-keyframes MOVE-BG {
+        0% {
+          background-position: left;
+        }
+        100% { 
+          background-position: right;
+        }
     }
 }
