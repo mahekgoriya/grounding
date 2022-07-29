@@ -27,6 +27,18 @@ html body{
     top:50%;
     transform:translateY(-57%);
 }
+@media(max-width:540px){
+.navbar>.container-fluid>.navbar-brand>b>h2{
+    font-size: 3.8vw;
+}
+}
+
+@media(max-width:400px){
+    .carousel-caption>.display-3{
+        font-size:6vw;
+    }
+}
+
 @media (max-width: 767px) {
 .collapse{
     display:flex;
