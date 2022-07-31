@@ -27,12 +27,14 @@ html body{
     top:50%;
     transform:translateY(-57%);
 }
+.nav-item>.nav-link:hover>b:hover{
+    color: #f5659c;
+}
 @media(max-width:540px){
 .navbar>.container-fluid>.navbar-brand>b>h2{
     font-size: 3.8vw;
 }
 }
-
 @media(max-width:400px){
     .carousel-caption>.display-3{
         font-size:6vw;
