@@ -57,11 +57,11 @@ html body {
   }
 }
 
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
   .collapse {
     display: flex;
   }
   .navbar-collapse {
     display: flex;
   }
-} */
+}
