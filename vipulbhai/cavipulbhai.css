@@ -47,11 +47,13 @@ html body {
 @media (max-width: 540px) {
   .navbar > .container-fluid > .navbar-brand > b > h2 {
     font-size: 3.8vw;
+    font-weight: bold;
   }
 }
 @media (max-width: 400px) {
   .carousel-caption > .display-3 {
     font-size: 6vw;
+    font-weight: bold;
   }
 }
 
