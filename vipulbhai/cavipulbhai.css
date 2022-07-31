@@ -1,51 +1,65 @@
-html body{
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
+html body {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
 }
-.navbar .navbar-toggler-icon{
-    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.carousel-item{
-    background: no-repeat scroll center scroll;
-    -webkit-background-size: cover;
-    background-size: cover;
+.carousel-item {
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
-.carousel-item::before{
-    content:"";
-    display:block;
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    background:#000;
-    opacity:0.5;
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.5;
 }
-.carousel-caption{
-    position:absolute;
-    top:50%;
-    transform:translateY(-57%);
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-57%);
 }
-.nav-item>.nav-link:hover>b:hover{
-    color: #f5659c;
+.autohide{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
 }
-@media(max-width:540px){
-.navbar>.container-fluid>.navbar-brand>b>h2{
+.scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+.nav-item > .nav-link:hover > b:hover {
+  color: #f5659c;
+}
+@media (max-width: 540px) {
+  .navbar > .container-fluid > .navbar-brand > b > h2 {
     font-size: 3.8vw;
+  }
 }
-}
-@media(max-width:400px){
-    .carousel-caption>.display-3{
-        font-size:6vw;
-    }
+@media (max-width: 400px) {
+  .carousel-caption > .display-3 {
+    font-size: 6vw;
+  }
 }
 
 @media (max-width: 767px) {
-.collapse{
-    display:flex;
-}
-.navbar-collapse{
+  .collapse {
     display: flex;
-}
+  }
+  .navbar-collapse {
+    display: flex;
+  }
 }
