@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Single level inheritance</h3>
+                    </div>
+                    <div class="cord-body"><br/>
+                        <h6 id="output" class="m-3"></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/20994dd270.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        class person{
+            constructor(name){
+                this.name=name;
+                console.log("person class constructor called");
+            }
+            walk(){
+                var message=`<h6>${this.name} can walk </h6>`;
+                document.getElementById("output").innerHTML+=message;
+            }
+            talk(){
+                var message=`<h6>${this.name} can talk </h6>`;
+                document.getElementById('output').innerHTML+=message;
+            }
+            eat(){
+                var message=`<h6>${this.name} can eat </h6>`;
+                document.getElementById('output').innerHTML+=message;
+
+            }
+        }
+
+        class student extends person{
+            constructor(name, course){
+                super(name);
+                this.course=course;
+            }
+            read(){
+                var message=`<h6>${this.name} can read ${this.course}</h6>`;
+                document.getElementById('output').innerHTML+=message;
+            }
+            write(){
+                var message=`<h6>${this.name} can write ${this.course} </h6>`;
+                document.getElementById('output').innerHTML+=message;
+            }
+            whatCanIDo(){
+                super.walk();
+                super.talk();
+                super.eat();
+                this.read();
+                this.write();
+            }
+        }
+
+        class developer extends student{
+            constructor(name,subject,platform){
+                super(name,subject);
+                this.platform=platform;
+            }
+            work(){
+                var message=`<p>${this.name} learns ${this.course} in ${this.platform}`;
+                document.querySelector("#output").innerHTML+=message;
+            }
+            whatCanIDo(){
+                super.walk();
+                super.talk();
+                super.eat();
+                super.read();
+                super.write();
+                this.work();
+            }
+        }
+        var p1=new developer('mahek','javascript','frontend');
+        p1.whatCanIDo();
+
+    </script>
+</body>
+</html>

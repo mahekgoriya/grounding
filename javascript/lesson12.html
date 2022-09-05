@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let l=[1,2,3,'4',5,6];
+        l=l.toString();
+        console.log(l);
+
+        // console.log(a.length);
+        console.log(l, typeof l);
+        // a=toString(a);
+        // let b=a.toString();
+        let a="mahek pooja"
+        let c= Array.from(a);
+        // console.log(c);
+        // let d=c.toString();
+        // console.log(d , typeof d);
+        c.forEach(function(i){
+            let str='n';
+            if(str==i){
+                console.log("string is in your array");
+            }
+            else{
+                console.log("string not available");
+            }
+        });
+
+        let x=c.includes('x');
+        console.log(x);
+
+        let v=['mahek', 'pooja'];
+        let b=['vishal','krishna'];
+        let n=v.concat(b);
+        console.log(n);
+    </script>
+</body>
+</html>

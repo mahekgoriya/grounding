@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="headingId" class="headingClass"><b>Hello World</b></h1>
+    <div class="container">
+        <div id="child-1">
+            child1
+        </div>
+        <div id="child-2">
+            child2
+        </div>
+        <div id="child-3">
+            child3
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById("headingId").innerHTML;
+        console.log(x);
+        x=document.getElementById("headingId").className;
+        console.log(x);
+        x=document.getElementById("headingId").id;
+        console.log(x);
+        x=document;
+        console.log(x);
+        x=document.title;
+        console.log(x);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@media (max-width:1199px) {
+    /* custom css */
+    h1{
+        font-size: 65px;
+    }
+    
+}
+
+
+@media(max-width:991px){
+    /* custom css */
+    h2{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    h3{
+        font-size:20px;
+    }
+    /* navbar */
+    .header_wrapper .navbar-brand img{
+        max-width:67px;
+    }
+    .header-scrolled{
+        height: auto;
+    }
+    .header_wrapper .navbar-collapsed{
+        margin-top:-2px;
+    }
+    .header_wrapper .menu-navbar-nav{
+        text-align: center;
+        background-color: var(--bg-white);
+        padding-bottom: 15px;
+    }
+    .header_wrapper .nav-item .nav-link{
+        margin-top:15px;
+    }
+    /* banner */
+    .banner_wrapper{
+        padding-top: 70px;
+    }
+    .banner_wrapper .top-menu .card{
+        height:200px;
+    }
+}
+@media(max-width:767px){
+    h1{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

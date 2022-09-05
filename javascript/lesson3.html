@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tex
+        {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <span id="title"></span>
+    <hr>
+    <h4 id="address"></h4> <hr>
+    <h4 id="area">Krishnanagr</h4>
+    <p id="bye">good bye....</p>
+    <script>
+        var message=prompt("What is your name");
+        console.log(message);
+        document.getElementById("title").innerHTML="<h1 class='tex'>"+message+"</h1>";
+        let cit=prompt("what is your city?");
+        document.getElementById("address").innerHTML=cit;
+        let are=document.getElementById("area").innerHTML;
+        are="Iscon Megacity";
+        console.log(are);
+        document.getElementById("area").innerHTML=are;
+    </script>
+</body>
+</html>
+
+
+
+
+
+
