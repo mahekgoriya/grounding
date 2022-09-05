@@ -14,7 +14,7 @@
             <div class="row justify-content-center">
                 <div class="col-6">
                     <div class="card mt-5">
-                        <div class="card-header">
+                        <div class="card-header text-center">
                             <h3>Interest Calculator</h3>
                         </div>
                         <div class="card-body">
@@ -54,12 +54,9 @@
             var principal=parseInt(document.getElementById("principal").value);
             var interest=parseInt(document.getElementById("interest").value);
             var year=parseInt(document.getElementById("year").value);
-            var finalAmount=(principal,interest,year)=>principal*interest*year;
-            // var finalAmount=principal*interest*year/100;
-            document.getElementById("output").innerHTML="<h3> Interest is : "+finalAmount(principal,interest,year)/100+"</h3>";
-            document.getElementById("output1").innerHTML="<h3> Total Amount is : "+((finalAmount(principal,interest,year)/100)+principal) +"</h3>";
-            // document.getElementById("output1").innerHTML="<h3> Total Amount is : "+(finalAmount+principal) +"</h3>";
-            // console.log(principal, typeof principal);
+            var finalAmount=(principal,interest,year)=>principal*interest*year/100;
+            document.getElementById("output").innerHTML="<h3> Interest is : "+finalAmount(principal,interest,year)+"</h3>";
+            document.getElementById("output1").innerHTML="<h3> Total Amount is : "+(finalAmount(principal,interest,year)+principal) +"</h3>";
         },true);
     </script>
 </body>
