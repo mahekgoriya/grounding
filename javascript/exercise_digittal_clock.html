@@ -12,17 +12,47 @@
 <body>
     <div class="container">
             <div class="row mt-4">
-                <div class="col-12">
+                <div class="col-6 col-md-3">
                     <div class="card">
                         <div class="card-header text-center">
-                            <h1>Digital Clock</h1>
+                            <h1>MUMBAI</h1>
                         </div>
                         <div class="card-body text-center" >
                             </br>
-                            <h1 id="output"></h1>
-                            <h1 id="output1"></h1>
-                            <h1 id="output2"></h1>
-                            <h1 id="output3"></h1>
+                            <h2 id="output" class="text-info"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h1>LONDON</h1>
+                        </div>
+                        <div class="card-body text-center" >
+                            </br>
+                            <h2 id="output1" class="text-info"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h1>WASHINGTON</h1>
+                        </div>
+                        <div class="card-body text-center" >
+                            </br>
+                            <h2 id="output2" class="text-info"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h1>TOKYO</h1>
+                        </div>
+                        <div class="card-body text-center" >
+                            </br>
+                            <h2 id="output3" class="text-info"></h2>
                         </div>
                     </div>
                 </div>
@@ -37,7 +67,13 @@
         constructor(){}
 
         display(){
-            document.querySelector("#output").innerHTML ="INDIA : "+ new Date().getHours()+" : "+new Date().getMinutes()+" : "+new Date().getSeconds();
+            var hoursIND=new Date().getHours();
+            if(hoursIND<10){hoursIND="0"+hoursIND;}
+            var minutesIND=new Date().getMinutes();
+            if(minutesIND<10){minutesIND="0"+minutesIND;}
+            var secondsIND=new Date().getSeconds();
+            if(secondsIND<10){secondsIND="0"+secondsIND;}
+            document.querySelector("#output").innerHTML = hoursIND+" : "+minutesIND+" : "+secondsIND;
         }
         
         displayUK(){
@@ -51,8 +87,12 @@
               minutes=minutes+1440;  
             }
             var hourUK=parseInt(minutes/60);
+            if(hourUK<10){hourUK="0"+hourUK;}
             var minutesUK=(minutes%60);
-            document.querySelector("#output1").innerHTML ="LONDON : "+ hourUK+" : "+minutesUK+" : "+new Date().getSeconds();
+            if(minutesUK<10){minutesUK="0"+minutesUK;}
+            var secondsUK=new Date().getSeconds();
+            if(secondsUK<10){secondsUK="0"+secondsUK;}
+            document.querySelector("#output1").innerHTML = hourUK+" : "+minutesUK+" : "+secondsUK;
 
         }
 
@@ -67,8 +107,12 @@
               minutes=minutes+1440;  
             }
             var hourUSA=parseInt(minutes/60);
+            if(hourUSA<10){hourUSA="0"+hourUSA;}
             var minutesUSA=(minutes%60);
-            document.querySelector("#output2").innerHTML ="WASHINGTON : "+ hourUSA+" : "+minutesUSA+" : "+new Date().getSeconds();
+            if(minutesUSA<10){minutesUSA="0"+minutesUSA;}
+            var secondsUSA=new Date().getSeconds();
+            if(secondsUSA<10){secondsUSA="0"+secondsUSA;}
+            document.querySelector("#output2").innerHTML = hourUSA+" : "+minutesUSA+" : "+secondsUSA;
 
         }
         displayJAPAN(){
@@ -82,8 +126,12 @@
               minutes=minutes-1440;  
             }
             var hourJAPAN=parseInt(minutes/60);
+            if(hourJAPAN<10){hourJAPAN="0"+hourJAPAN;}
             var minutesJAPAN=(minutes%60);
-            document.querySelector("#output3").innerHTML ="JAPAN: "+ hourJAPAN+" : "+minutesJAPAN+" : "+new Date().getSeconds();
+            if(minutesJAPAN<10){minutesJAPAN="0"+minutesJAPAN;}
+            var secondsJAPAN=new Date().getSeconds();
+            if(secondsJAPAN<10){secondsJAPAN="0"+secondsJAPAN;}
+            document.querySelector("#output3").innerHTML = hourJAPAN+" : "+minutesJAPAN+" : "+secondsJAPAN;
 
         }
     }    
