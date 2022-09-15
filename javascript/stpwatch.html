@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        * {
+            background-color: blueviolet;
+        }
+
+        span {
+            padding-top: 200px;
+        }
+
+        b {
+            font-size: 180px;
+        }
+
+        a {
+            font-size: 20px;
+        }
+
+        button {
+            margin-inline: 20px;
+            color: beige;
+            padding-inline: 40px;
+        }
+
+        #start {
+            background-color: green;
+            border-color: green;
+            font-size: 30px;
+
+        }
+
+        #stop {
+            background-color: blue;
+            border-color: blue;
+            font-size: 30px;
+
+        }
+
+        #reset {
+            background-color: red;
+            border-color: red;
+            font-size: 30px;
+        }
+        a{
+            font-size: xx-large;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <span>
+                <b id="hour">00</b><a>Hr</a>
+                <b id="minute">00</b><a>Min</a>
+                <b id="second">00</b><a>Sec</a>
+                <b id="mili">00</b>
+                <br />
+                <button id="start" onclick="start()">START</button>
+                <button id="stop" onclick="stop()">STOP</button>
+                <button id="reset" onclick="reset()">RESET</button>
+            </span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        var hr = 0;
+        var minute = 0;
+        var second = 0;
+        var mili = 0;
+        let st = 1;
+        increament();
+        let start = () => {
+            st = 0;
+        }
+
+        function stop() {
+            st = 1;
+        }
+        function reset() {
+            st = 1;
+            mili=0;
+            second=0;
+            minute=0;
+            hr=0;
+        }
+
+        function increament() {
+            
+            if (st === 0) {
+                mili++
+                if (mili > 99) {
+                    mili = 0;
+                    second++;
+                }
+                if (second > 59) {
+                    second = 0;
+                    minute++;
+                }
+                if (minute > 59) {
+                    minute = 0;
+                    hr++;
+                }
+            }
+            var hour = hr <= 9 ? "0" + hr : hr;
+            var min = minute <= 9 ? "0" + minute : minute;
+            var sec = second <= 9 ? "0" + second : second;
+            var milisecond = mili <= 9 ? "0" + mili : mili;
+            document.getElementById("hour").innerHTML = hour;
+            document.getElementById("minute").innerHTML = min;
+            document.getElementById("second").innerHTML = sec;
+            document.getElementById("mili").innerHTML = milisecond;
+
+            setTimeout(increament, 10);
+        } 
+    </script>
+</body>
+
+</html>

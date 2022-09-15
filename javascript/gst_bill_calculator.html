@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <STYLE>
+        span {
+            border: 1px solid blue;
+        }
+    </STYLE>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="cord-header text-center">
+                        <h1>GST Billing</h1>
+                    </div>
+
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price per Unit</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">SGST</th>
+                                    <th scope="col">CGST</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><input type="number" class="price" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="quantity" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="sgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="cgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><button class="total px-5">TOTAL</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td><input type="number" class="price" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="quantity" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="sgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="cgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><button class="total px-5">TOTAL</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td><input type="number" class="price" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="quantity" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="sgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="cgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><button class="total px-5">TOTAL</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td><input type="number" class="price" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="quantity" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="sgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><input type="number" class="cgst" value="0" placeholder="0" oninput="gst()"></td>
+                                    <td><button class="total px-5"  oninput="gst()">TOTAL</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><h3 class="py-3">GRAND TOTAL</h3></td>
+                                    <td><div class="px-4 display-3" id="grandtotal">0</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="calculate">CALCULATE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        var price, quantity, sgst, cgst, total, cal,gtotal=0;
+        cal = document.getElementById("calculate");
+        price = document.getElementsByClassName("price");
+        quantity = document.getElementsByClassName("quantity");
+        sgst = document.getElementsByClassName("sgst");
+        cgst = document.getElementsByClassName("cgst");
+        total = document.getElementsByClassName("total");
+        function gst() {
+            for (var i = 0; i < price.length; i++) {
+                if(i==0){gtotal=0}
+                var x,y,z;
+                x = (parseInt(price[i].value) * parseInt(quantity[i].value)) * parseInt(sgst[i].value) / 100;
+                y = (parseInt(price[i].value) * parseInt(quantity[i].value)) * parseInt(cgst[i].value) / 100;
+                z= parseInt(price[i].value) * parseInt(quantity[i].value) + x + y;
+                total[i].innerHTML =z;
+                gtotal=gtotal+z;
+                document.getElementById("grandtotal").innerHTML = gtotal;
+            }
+        }
+        // cal.addEventListener("click", function () {
+        //     for (var i = 0; i < price.length; i++) {
+        //         if(i==0){gtotal=0}
+        //         var x,y,z;
+        //         x = (parseInt(price[i].value) * parseInt(quantity[i].value)) * parseInt(sgst[i].value) / 100;
+        //         y = (parseInt(price[i].value) * parseInt(quantity[i].value)) * parseInt(cgst[i].value) / 100;
+        //         z= parseInt(price[i].value) * parseInt(quantity[i].value) + x + y;
+        //         total[i].innerHTML =z;
+        //         gtotal=gtotal+z;
+        //         document.getElementById("grandtotal").innerHTML = gtotal;
+        //     }
+        // }, true);
+        
+    </script>
+</body>
+
+</html>
