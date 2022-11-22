@@ -1,0 +1,15 @@
+.redColor{
+    color:red;
+    font-weight: 600;
+}
+.greenColor{
+    color:green;
+    font-weight: 700;
+}
+.blue{
+    color:blue;
+    font-weight: 700;
+}
+.dark{
+    font-weight: 600;
+}
